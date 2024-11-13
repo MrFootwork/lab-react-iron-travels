@@ -13,7 +13,9 @@
         "description": "Includes flights, hotel, meals, entertainment, tours and tickets to tourist attractions.",
         "cost": 2200
       }
-    ]
+      
+    ],
+    "isFavourite" : true
   },
   {
     "id": 2,
@@ -34,7 +36,8 @@
         "description": "Comfort Hotel Tokyo Kanda - 4 stars",
         "cost": 674
       }
-    ]
+    ],
+    "isFavourite" : true
   },
   {
     "id": 3,

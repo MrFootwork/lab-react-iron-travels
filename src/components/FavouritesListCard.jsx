@@ -1,10 +1,10 @@
 const FavouritesListCard = ({ plan }) => {
 	return (
 		<li>
-			<div id="favourites-image-container">
+			<div id='favouritesImageContainer'>
 				<img src={plan.image} alt='' />
 			</div>
-			<div id="favourites-info-container">
+			<div id='favouritesInfoContainer'>
 				<h6>
 					{plan.destination} ({plan.days} Days)
 				</h6>

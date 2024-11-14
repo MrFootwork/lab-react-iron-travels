@@ -29,6 +29,17 @@ const TravelPlanCard = ({ plan, stateTravelList: [list, setList] }) => {
 		setList(list.filter(item => item.id !== id));
 	}
 
+	function addToFavourites(id) {
+		plan.isFavourite = true;
+
+		setList(list =>
+			list.map(currPlan => {
+				if (currPlan.id === id) return plan;
+				return currPlan;
+			})
+		);
+	}
+
 	// FIXME add add to favourites button
 	return (
 		<li>
@@ -45,7 +56,11 @@ const TravelPlanCard = ({ plan, stateTravelList: [list, setList] }) => {
 					Price: <span>{plan.totalCost}€</span>
 				</p>
 				<div id='labels'>{labels}</div>
-				<button onClick={() => handleDelete(plan.id)}>Delete</button>
+
+				<div id='buttonContainer'>
+					<button onClick={() => handleDelete(plan.id)}>Delete</button>
+					<button onClick={() => addToFavourites(plan.id)}>❤</button>
+				</div>
 			</div>
 		</li>
 	);

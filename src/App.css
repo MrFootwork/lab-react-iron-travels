@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .logo {
@@ -42,7 +42,10 @@ body {
 }
 
 #listWrapper {
-  display: flex;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1rem;
 }
 
 ul#travelList {
@@ -93,35 +96,66 @@ ul#travelList {
 				}
 			}
 
-      & #labels {
-        display: flex;
-        gap: .5rem;
+			& #labels {
+				display: flex;
+				gap: 0.5rem;
 
-        & label {
-          border-radius: 4px;
-          padding: 0.2rem 1rem;
-  
-          &.label-great-deal {
-            background-color: rgb(91, 168, 91);
-            color: black;
-          }
-  
-          &.label-premium, &.label-all-inclusive {
-            background-color: rgb(79, 118, 202);
-            color: white;
-          }
-        }
-      }
+				& label {
+					border-radius: 4px;
+					padding: 0.2rem 1rem;
+
+					&.label-great-deal {
+						background-color: rgb(91, 168, 91);
+						color: black;
+					}
+
+					&.label-premium,
+					&.label-all-inclusive {
+						background-color: rgb(79, 118, 202);
+						color: white;
+					}
+				}
+			}
+
+			& #buttonContainer {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
 		}
 	}
 }
 
-ul#favouritsList {
+ul#favouritesList {
 	display: flex;
 	flex-direction: column;
+	gap: 1rem;
+	width: 15rem;
 
-	/* FIXME style the favourites cards */
+	list-style: none;
+
 	& li {
+		border: 1px solid black;
+		width: 100%;
+		height: 10rem;
 
+		& #favouritesImageContainer {
+			width: 100%;
+			height: 50%;
+			overflow: hidden;
+
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		& #favouritesInfoContainer {
+			height: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+		}
 	}
 }
